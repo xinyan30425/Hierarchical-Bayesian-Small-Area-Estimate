@@ -1,6 +1,5 @@
 Model Overview
 This model is a hierarchical Bayesian logistic regression model designed to estimate the probability of cognitive decline based on various demographic and geographic predictors. The hierarchical structure allows for incorporating random effects to account for county-level variability.
-![image](https://github.com/user-attachments/assets/0b1bc2c2-521b-463b-a1fa-536f6dc369b1)
 
 Purpose of the Hierarchical Bayesian Model
 1.	Parameter Estimation:
@@ -18,14 +17,13 @@ Purpose of the Hierarchical Bayesian Model
 5.	Improving Estimates in Small Areas:
 •	The hierarchical Bayesian model borrows strength from the entire dataset, improving estimates for counties with sparse data.
 •	This is particularly useful in small-area estimation where some areas may have limited observations.
-![image](https://github.com/user-attachments/assets/3dce5d4b-0353-438b-a456-9d16b64f1f0d)
+
 
 Methodology
 1.	Hierarchical Bayesian Logistic Regression:
 •	Logistic Regression: The model uses logistic regression to model the probability of a binary outcome (cognitive decline, yes or no).
 •	Bayesian Inference: Bayesian methods are used to estimate the parameters. This involves specifying prior distributions for the parameters and using observed data to update these priors to posterior distributions.
 •	Hierarchical Structure: The model includes random effects to account for variability at the county level, allowing for county-specific deviations from the overall relationship.
-![image](https://github.com/user-attachments/assets/876d6165-9eae-4bc5-9a9e-db8df90f9917)
 
 
 Model Specification:
@@ -56,11 +54,11 @@ uj∼N(0,σu)
 •	Priors:
 β0,βage,βrace,βeduca,βsex∼N(0,10)
 σu∼Cauchy(0,2.5)
-![image](https://github.com/user-attachments/assets/d0e14a5b-934b-4c03-a778-60df271ab062)
+
 
 Summary
 This hierarchical Bayesian model allows for robust estimation of the probability of cognitive decline by incorporating individual-level predictors (age, race, education, sex) and county-level variability (random effects). The Bayesian framework provides a full posterior distribution for each parameter, offering a complete view of the uncertainty and variability in the estimates.
-![image](https://github.com/user-attachments/assets/0da5d464-e48f-4e01-9949-bb4a9334852d)
+
 
 
 
