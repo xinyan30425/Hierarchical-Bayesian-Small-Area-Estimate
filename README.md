@@ -29,28 +29,46 @@ Methodology
 Model Specification:
 Data
 •	N: Number of individuals.
+
 •	J: Number of counties.
+
 •	county[N]: County indicator for each individual.
+
 •	y[N]: Cognitive decline indicator (1 for yes, 0 for no).
+
 •	AGE_GROUP[N]: Age group (6 categories).
+
 •	RACE_GROUP[N]: Race group (6 categories).
+
 •	EDUCA[N]: Education level (6 categories).
+
 •	SEX_GROUP[N]: Sex group (2 categories).
+
 •	LLCPWT[N]: Weights for each observation.
+
 Parameters
 •	beta_0: Intercept term.
+
 •	beta_age[6]: Coefficients for each age group.
+
 •	beta_race[6]: Coefficients for each race group.
+
 •	beta_educa[6]: Coefficients for each education level.
+
 •	beta_sex[2]: Coefficients for each sex group.
+
 •	u[J]: Random effects for each county.
+
 •	sigma_u: Standard deviation of the random effects.
+
 Model
 •	Likelihood:
 yi∼Bernoulli(logit−1(ηi))
-where ηi=β0+βage[AGEGROUPi]+βrace[RACEGROUPi]+βeduca[EDUCAi]+βsex[SEXGROUPi]+u[countyi]
+where ηi=β0+βage[AGEGROUPi]+βrace[RACEGROUPi]+βeduca[EDUCAi]+βsex[SEXGROUPi]+u[county]
+
 •	Random effect:
 uj∼N(0,σu)
+
 •	Priors:
 β0,βage,βrace,βeduca,βsex∼N(0,10)
 σu∼Cauchy(0,2.5)
