@@ -20,9 +20,11 @@ Purpose of the Hierarchical Bayesian Model
 
 
 Methodology
-1.	Hierarchical Bayesian Logistic Regression:
+Hierarchical Bayesian Logistic Regression:
 •	Logistic Regression: The model uses logistic regression to model the probability of a binary outcome (cognitive decline, yes or no).
+
 •	Bayesian Inference: Bayesian methods are used to estimate the parameters. This involves specifying prior distributions for the parameters and using observed data to update these priors to posterior distributions.
+
 •	Hierarchical Structure: The model includes random effects to account for variability at the county level, allowing for county-specific deviations from the overall relationship.
 
 
