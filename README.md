@@ -1,7 +1,9 @@
 Model Overview
+
 This model is a hierarchical Bayesian logistic regression model designed to estimate the probability of cognitive decline based on various demographic and geographic predictors. The hierarchical structure allows for incorporating random effects to account for county-level variability.
 
-Purpose of the Hierarchical Bayesian Model
+Purpose of the Hierarchical Bayesian Model:
+
 1.	Parameter Estimation:
 •	The model estimates the relationships between cognitive decline and various demographic and geographic variables (age, race, education, sex, and county).
 •	These relationships are captured through the model coefficients (e.g., beta_age, beta_race).
@@ -21,6 +23,7 @@ Purpose of the Hierarchical Bayesian Model
 
 Methodology
 Hierarchical Bayesian Logistic Regression:
+
 •	Logistic Regression: The model uses logistic regression to model the probability of a binary outcome (cognitive decline, yes or no).
 
 •	Bayesian Inference: Bayesian methods are used to estimate the parameters. This involves specifying prior distributions for the parameters and using observed data to update these priors to posterior distributions.
